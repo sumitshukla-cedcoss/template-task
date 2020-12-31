@@ -7,23 +7,19 @@ get_header();
 ?>
 <div class = "page-container">
 	<div class = "main-content">
-		<div class = "container pt-5">
+		<div class = "pt-5">
 
 		<div class="main-banner header-text">
 	  <div class="container-fluid">
 	  <div class="owl-banner owl-carousel">
-	  <?php if ($blog_posts->have_posts()) : ?>
-									<?php while ($blog_posts->have_posts()) : $blog_posts->the_post(); ?>
+	  <?php if ( $blog_posts->have_posts() ) : ?>
+									<?php while ( $blog_posts->have_posts() ) : $blog_posts->the_post(); ?>
 									
 	  
 		  <div class="item">
-		  <?php	
-		  if (has_post_thumbnail()) {
-    the_post_thumbnail(get_the_ID(), 'full');
-} ?>
-			<!-- <img src="assets/images/banner-item-01.jpg" alt=""> -->
+			<?php echo the_post_thumbnail( array( 437 ,378 ) ); ?>
 			<div class="item-content">
-			<?php echo the_post_thumbnail(array(437 ,378)); ?>
+			
 			  <div class="main-content">
 				<div class="meta-category">
 				
