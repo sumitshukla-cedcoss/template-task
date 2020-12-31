@@ -18,7 +18,7 @@ get_header();
 	  
 		  <div class="item">
 		  <?php	
-		  if (has_post_thumbnail())  {
+		  if (has_post_thumbnail()) {
     the_post_thumbnail(get_the_ID(), 'full');
 } ?>
 			<!-- <img src="assets/images/banner-item-01.jpg" alt=""> -->
