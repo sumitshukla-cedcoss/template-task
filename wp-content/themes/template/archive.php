@@ -25,19 +25,21 @@ get_header();
 			</header><!-- .page-header -->
 			<div class="pt-5">
 			<div class="pt-5">
-			<?php  /* Start the Loop */
+			<?php
+				/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				echo"<h1>";
-				the_title(); echo":";
-				echo"</h1>";
+				echo '<h1>';
+				the_title();
+				echo ':';
+				echo '</h1>';
 
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content',get_theme_mod('display_excerpt_or_full_post', 'post'));
+				get_template_part( 'template-parts/content', get_theme_mod( 'display_excerpt_or_full_post', 'post' ) );
 
 			endwhile;
 
@@ -56,5 +58,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-// get_sidebar();
 get_footer();
