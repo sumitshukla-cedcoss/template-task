@@ -64,6 +64,22 @@ define('NONCE_SALT',       '4YcpgKTDaebopSlWup/Gowl1JGukRdBqAyhu3piDyqKSn6QxKvDO
 $table_prefix = 'wp_';
 
 
+define( 'WP_DEBUG', true );
+
+// Enable Debug logging to the /wp-content/debug.log file
+if ( WP_DEBUG ) {
+@error_reporting( E_ALL );
+@ini_set( 'log_errors', true );
+@ini_set( 'log_errors_max_len', '0' );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'CONCATENATE_SCRIPTS', false );
+define( 'SAVEQUERIES', true );
+ini_set( 'error_reporting', E_ALL );
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 
 /* That's all, stop editing! Happy publishing. */

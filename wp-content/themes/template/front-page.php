@@ -28,7 +28,7 @@ get_header();
 										?>
 									<div class="item">
 										<?php
-															esc_html_e( 'the_post_thumbnail( array( 437, 378 ) )' );
+															esc_html( the_post_thumbnail( array( 437, 378 ) ) );
 										?>
 			<div class="item-content">
 			<div class="main-content">
